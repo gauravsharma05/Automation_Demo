@@ -31,9 +31,10 @@ public class search {
 	//	driver.findElement(By.cssSelector("input[value='Go']")).click();
 		
 		//read the text from the RESULTS string
-		String str = driver.findElement(By.xpath("//span[@class='a-size-medium-plus a-color-base a-text-normal']")).getText();
-	
-		Assert.assertEquals(str, "RESULTS");
+		String str = driver.findElement(By.xpath("//span[@class='a-size-medium-plus a-color-base a-text-bold']")).getText();
+		                                                        
+		
+		Assert.assertEquals(str, "Results");
 		System.out.println(str);
 		
 		
@@ -50,7 +51,7 @@ public class search {
 		//click on "no Thanks" for insurance ---------------------------------------
 		
 		
-		driver.findElement(By.id("attachSiNoCoverage")).click();
+		//driver.findElement(By.id("attachSiNoCoverage")).click();
 		
 	
 		driver.quit();
