@@ -7,22 +7,22 @@ public class TodaysDealsPage {
 	// WebElements --------------------------------------------------------------------------
 	public static WebElement Lightning_Deals(WebDriver driver) {
 		
-		WebElement element = driver.findElement(By.linkText("Lightning Deals"));
+		WebElement element =  driver.findElement(By.xpath("//*[@data-csa-c-element-id='filter-bubble-deals-collection-lightning-deals']"));
+
 		
 		return element;	
 	}
 	
 	public static WebElement Devices(WebDriver driver) {
 		
-		WebElement element = driver.findElement(By.linkText("Devices"));
-		
+		WebElement element = driver.findElement(By.xpath("//*[@data-csa-c-element-id='filter-bubble-deals-collection-amazon-devices']"));
 		return element;	
 	}
 	
 
 	public static WebElement Smart_Watches(WebDriver driver) {
 		
-		WebElement element = driver.findElement(By.linkText("Smart Watches"));
+		WebElement element =  driver.findElement(By.xpath("//*[@data-csa-c-element-id='filter-bubble-deals-collection-smart-watches']"));
 	return element;
 	}
 	
