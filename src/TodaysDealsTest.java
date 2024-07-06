@@ -1,7 +1,9 @@
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -21,19 +23,24 @@ public class TodaysDealsTest {
 		
 		driver.findElement(By.linkText("Today's Deals")).click();
 		
+		clickCookieButton(driver);
+
+		
 		TodaysDealsPage TodaysDeals = new TodaysDealsPage();
 				
-		
+		// click on "Today's Deals"
+		//click on "Lightning Deals"
+		// click on "Devices"
+		// click on "Smart Watches"
 		
 		TodaysDeals.clickLightning_Deals(driver);
-		//driver.findElement(By.linkText("Lightning Deals")).click();
-		Thread.sleep(2000);
+
+		//	Thread.sleep(4000);
 		
-		//driver.findElement(By.linkText("Devices")).click();
+
 		TodaysDeals.clickDevices(driver);
 		Thread.sleep(2000);
 		
-		//driver.findElement(By.linkText("Smart Watches")).click();
 		TodaysDeals.clickSmart_Watches(driver);
 		Thread.sleep(2000);
 		
@@ -41,4 +48,14 @@ public class TodaysDealsTest {
 		
 	}
 
+	// Method to click on the cookie button
+		public static void clickCookieButton(WebDriver driver) {
+		List<WebElement> z = driver.findElements(By.id("sp-cc-accept"));
+
+		if (z.size() > 0) {
+			driver.findElement(By.id("sp-cc-accept")).click();
+		}
+		}
+	
+	
 }
