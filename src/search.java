@@ -31,8 +31,11 @@ public class search {
 	//	driver.findElement(By.cssSelector("input[value='Go']")).click();
 		
 		//read the text from the RESULTS string
-		String str = driver.findElement(By.xpath("//span[@class='a-size-medium-plus a-color-base a-text-bold']")).getText();
-		                                                        
+		//String str = driver.findElement(By.xpath("//span[@class='a-size-medium-plus a-color-base a-text-bold']")).getText();
+		
+		  
+		String str = driver.findElement(By.cssSelector("h2.a-size-medium-plus.a-spacing-none.a-color-base.a-text-bold")).getText();
+
 		
 		Assert.assertEquals(str, "Results");
 		System.out.println(str);
